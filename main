@@ -1,0 +1,14 @@
+function perimeter(n) {
+    return fib(n);
+}
+
+function fib (n) {
+  var res = 0;
+  var tab = [0,1]
+  for (var i = n; i >= 0; i--) {
+    res += tab[1];
+    tab.push(tab[0] + tab[1]);
+    tab.shift();
+  }
+  return res * 4;
+}
